@@ -37,9 +37,10 @@ public class PasswordUtilsTest {
     @Test
     void testContainsTripleInMiddle() {
         //arrange
-        
+        String password = "paaasword";
         //act
-
+        boolean actual = PasswordUtils.containsTriple(password);
         //assert
+        assertEquals(true, actual);
     }
 }
