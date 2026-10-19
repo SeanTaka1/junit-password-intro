@@ -41,4 +41,14 @@ public class PasswordUtils {
         return true;
     }
 
+    public static boolean containsTriple(String password){
+        for (int i = 0; i < password.length() - 2, i++) {
+            char c = password.charAt(i);
+            if (c == password.charAt(i + 1) && c == password.charAt(i + 2)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
