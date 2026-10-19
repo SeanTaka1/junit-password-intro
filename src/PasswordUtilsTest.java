@@ -43,4 +43,14 @@ public class PasswordUtilsTest {
         //assert
         assertEquals(true, actual);
     }
+
+    @Test 
+    void testisAlphanumeric() {
+        //arrange
+        String password = "He11oWor1d";
+        //act
+        boolean actual = PasswordUtils.isAlphanumeric(password);
+        //assert
+        assertEquals(true, actual);
+    }
 }
