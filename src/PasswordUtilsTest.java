@@ -87,4 +87,15 @@ public class PasswordUtilsTest {
         //assert
         assertEquals(1, actual);
     }
+
+    @Test
+    void testHasSufficientSpecialCharactersExactlyMinimum() {
+        //arrange
+        String password = "a!b@";
+        int minimum = 2;
+        //act
+        boolean actual = PasswordUtils.hasSufficientSpecialCharacters(passsword, minimum);
+        //assert
+        assertEquals(true, actual);
+    }
 }
