@@ -66,7 +66,7 @@ public class PasswordUtilsTest {
         //assert
         assertEquals(true, actual);
     }
-}
+
 
     @Test
     void testCountSpecialCharactersSome(){
@@ -77,3 +77,4 @@ public class PasswordUtilsTest {
         //assert
         assertEquals(3, actual);
     }
+}

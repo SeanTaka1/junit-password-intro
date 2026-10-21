@@ -49,4 +49,13 @@ public class PasswordUtils {
         return false;
     }
 
+    public static int countSpecialCharacters(String password){
+        int count = 0;
+        for (int i =0; i < password.length(); i++) {
+            if (!Character.isLetterOrDigit(password.charAt(i))) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
