@@ -94,8 +94,19 @@ public class PasswordUtilsTest {
         String password = "a!b@";
         int minimum = 2;
         //act
-        boolean actual = PasswordUtils.hasSufficientSpecialCharacters(passsword, minimum);
+        boolean actual = PasswordUtils.hasSufficientSpecialCharacters(password, minimum);
         //assert
         assertEquals(true, actual);
+    }
+
+    @Test
+    void testHasSufficientSpecialCharactersBelowMinimum() {
+        //arrange
+        String password = "abc!";
+        int minimum = 2;
+        //act
+        boolean actual = PasswordUtils.hasSufficientSpecialCharacters(password, minimum);
+        //assert
+        assertEquals(false, actual);
     }
 }
